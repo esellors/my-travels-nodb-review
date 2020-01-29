@@ -1,3 +1,5 @@
+let id = 2;
+
 const myLocations = [
     { 
         id: 0, 
@@ -20,6 +22,15 @@ module.exports = {
         res.status(200).json(myLocations);
     },
     addLocation: (req, res) => {
+        const newLocation = {
+            id,
+            ...req.body
+        }
 
+        myLocations.push(newLocation);
+
+        id++;
+
+        res.status(200).json(myLocations)
     }
 }

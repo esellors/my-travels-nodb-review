@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const LC = require('./controllers/locationsController');
 
+app.use(express.json());
+
 // location routes
 app.get('/api/locations', LC.getLocations);
 app.post('/api/locations', LC.addLocation);
