@@ -32,5 +32,12 @@ module.exports = {
         id++;
 
         res.status(200).json(myLocations)
+    },
+    deleteLocation: (req, res) => {
+        const targetIndex = myLocations.findIndex(location => location.id === +req.params.id);
+
+        myLocations.splice(targetIndex, 1);
+
+        res.status(200).json(myLocations);
     }
 }

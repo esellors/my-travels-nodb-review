@@ -1,10 +1,11 @@
 import React from 'react';
+import Location from './Location';
 
 export default class Locations extends React.Component {
     render() {
         const locationsMapped = this.props.locations.map((location, index) => {
             return (
-                <h3 key={index}>{location.country},{location.city}</h3>
+                <Location location={location} key={index}/>
             )
         }).reverse();
 

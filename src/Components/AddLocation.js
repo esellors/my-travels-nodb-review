@@ -27,7 +27,7 @@ export default class AddLocation extends React.Component {
     render() {
         return (
             <section>
-                <p>AddLocation Component</p>
+                <p>Add New Location:</p>
                 <input 
                     name='country'
                     placeholder='enter country'
