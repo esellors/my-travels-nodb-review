@@ -16,7 +16,7 @@ export default class Location extends React.Component {
     handleDelete() {
         axios
             .delete(`/api/locations/${this.props.location.id}`)
-            .then(res => console.log(res.data))
+            .then(res => this.props.retrieveLocations(res.data))
             .catch(err => console.log(err));
     }
     render() {

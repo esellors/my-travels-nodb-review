@@ -28,7 +28,9 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <AddLocation retrieveLocations={this.retrieveLocations}/>
-        <Locations locations={this.state.locations} />
+        <Locations 
+          locations={this.state.locations} retrieveLocations={this.retrieveLocations} 
+        />
         <Footer />
       </div>
     );

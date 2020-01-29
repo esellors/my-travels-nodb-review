@@ -5,7 +5,10 @@ export default class Locations extends React.Component {
     render() {
         const locationsMapped = this.props.locations.map((location, index) => {
             return (
-                <Location location={location} key={index}/>
+                <Location 
+                    location={location} key={index}
+                    retrieveLocations={this.props.retrieveLocations}
+                />
             )
         }).reverse();
 
