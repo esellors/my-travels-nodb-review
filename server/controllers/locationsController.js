@@ -33,6 +33,13 @@ module.exports = {
 
         res.status(200).json(myLocations)
     },
+    toggleFav: (req, res) => {
+        const targetIndex = myLocations.findIndex(location => location.id === +req.params.id);
+
+        myLocations[targetIndex].favorite = !myLocations[targetIndex].favorite;
+
+        res.status(200).json(myLocations);
+    },
     deleteLocation: (req, res) => {
         const targetIndex = myLocations.findIndex(location => location.id === +req.params.id);
 

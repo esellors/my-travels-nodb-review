@@ -7,6 +7,7 @@ app.use(express.json());
 // location routes
 app.get('/api/locations', LC.getLocations);
 app.post('/api/locations', LC.addLocation);
+app.put('/api/locations/:id', LC.toggleFav);
 app.delete('/api/locations/:id', LC.deleteLocation);
 
 const PORT = 5050;
